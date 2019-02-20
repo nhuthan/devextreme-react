@@ -61,7 +61,9 @@ class TemplateWrapper extends React.PureComponent<ITemplateWrapperProps> {
         if (node) {
             this.props.container.appendChild(node);
         }
-        this.props.container.appendChild(removalListener);
+        if (removalListener) {
+            this.props.container.appendChild(removalListener);
+        }
     }
 }
 
